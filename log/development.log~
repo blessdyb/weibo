@@ -1,0 +1,1764 @@
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 09:01:35 +0800
+
+ActionController::RoutingError (uninitialized constant WelcomeController):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-25 09:02:41 +0800
+  Processing by WeiboController#index as HTML
+Rendered weibo/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/new_message" for 127.0.0.1 at 2011-05-25 09:03:07 +0800
+  Processing by WeiboController#new_message as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `sina_api_key' for #<WeiboController:0x962a080>):
+  app/controllers/weibo_controller.rb:8:in `consumer'
+  app/controllers/weibo_controller.rb:30:in `new_message'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+
+
+Started GET "/weibo/new_message" for 127.0.0.1 at 2011-05-25 09:04:00 +0800
+  Processing by WeiboController#new_message as HTML
+Completed   in 148ms
+
+ActionView::MissingTemplate (Missing template weibo/new_message with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/var/www/ror/weibo/app/views"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/weibo/new_message" for 127.0.0.1 at 2011-05-25 09:04:36 +0800
+  Processing by WeiboController#new_message as HTML
+Completed   in 173ms
+
+ActionView::MissingTemplate (Missing template weibo/new_message with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/var/www/ror/weibo/app/views"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.4ms)
+
+
+Started GET "/weibo/new_message" for 127.0.0.1 at 2011-05-25 09:04:37 +0800
+  Processing by WeiboController#new_message as HTML
+Completed   in 1000ms
+
+ActionView::MissingTemplate (Missing template weibo/new_message with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/var/www/ror/weibo/app/views"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/weibo/new_message" for 127.0.0.1 at 2011-05-25 09:05:08 +0800
+  Processing by WeiboController#new_message as HTML
+Completed   in 328ms
+
+ActionView::MissingTemplate (Missing template weibo/new_message with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/var/www/ror/weibo/app/views"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/weibo/new_message" for 127.0.0.1 at 2011-05-25 09:05:57 +0800
+  Processing by WeiboController#new_message as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 2590ms (Views: 1356.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-25 09:06:36 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Findex&oauth_token=313c1018bb3e3031ecaa7d1ec86e5df7
+Completed 302 Found in 1120ms
+
+
+Started GET "/weibo/index?oauth_token=313c1018bb3e3031ecaa7d1ec86e5df7&oauth_verifier=744506" for 127.0.0.1 at 2011-05-25 09:06:52 +0800
+  Processing by WeiboController#index as HTML
+  Parameters: {"oauth_token"=>"313c1018bb3e3031ecaa7d1ec86e5df7", "oauth_verifier"=>"744506"}
+Rendered weibo/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-25 09:08:38 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=b0030467e10c904454f67b9cfd62f24e
+Completed 302 Found in 1866ms
+
+
+Started GET "/weibo/access_token?oauth_token=b0030467e10c904454f67b9cfd62f24e&oauth_verifier=327424" for 127.0.0.1 at 2011-05-25 09:08:45 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"b0030467e10c904454f67b9cfd62f24e", "oauth_verifier"=>"327424"}
+Completed   in 686ms
+
+OAuth::Unauthorized (401 Unauthorized):
+  app/controllers/weibo_controller.rb:24:in `access_token'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/weibo/access_token?oauth_token=b0030467e10c904454f67b9cfd62f24e&oauth_verifier=327424" for 127.0.0.1 at 2011-05-25 09:11:20 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"b0030467e10c904454f67b9cfd62f24e", "oauth_verifier"=>"327424"}
+Rendered text template (0.0ms)
+Redirected to 
+Completed   in 1482ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/weibo_controller.rb:27:in `access_token'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.2ms)
+
+
+Started GET "/weibo/access_token?oauth_token=b0030467e10c904454f67b9cfd62f24e&oauth_verifier=327424" for 127.0.0.1 at 2011-05-25 09:12:23 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"b0030467e10c904454f67b9cfd62f24e", "oauth_verifier"=>"327424"}
+Completed   in 72ms
+
+OAuth::Unauthorized (401 Unauthorized):
+  app/controllers/weibo_controller.rb:24:in `access_token'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.2ms)
+
+
+Started GET "/weibo/access_token?oauth_token=b0030467e10c904454f67b9cfd62f24e&oauth_verifier=327424" for 127.0.0.1 at 2011-05-25 09:14:22 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"b0030467e10c904454f67b9cfd62f24e", "oauth_verifier"=>"327424"}
+Completed   in 55ms
+
+OAuth::Unauthorized (401 Unauthorized):
+  app/controllers/weibo_controller.rb:24:in `access_token'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started GET "/weibo/access_token?oauth_token=b0030467e10c904454f67b9cfd62f24e&oauth_verifier=327424" for 127.0.0.1 at 2011-05-25 09:23:23 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"b0030467e10c904454f67b9cfd62f24e", "oauth_verifier"=>"327424"}
+Completed   in 627ms
+
+OAuth::Unauthorized (401 Unauthorized):
+  app/controllers/weibo_controller.rb:24:in `access_token'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (25.9ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.3ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-25 09:23:45 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=632d6e34fe3e164be9cea518c6349432
+Completed 302 Found in 248ms
+
+
+Started GET "/weibo/access_token?oauth_token=632d6e34fe3e164be9cea518c6349432&oauth_verifier=847016" for 127.0.0.1 at 2011-05-25 09:23:50 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"632d6e34fe3e164be9cea518c6349432", "oauth_verifier"=>"847016"}
+Completed   in 1186ms
+
+ActionView::MissingTemplate (Missing template weibo/access_token with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/var/www/ror/weibo/app/views"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.7ms)
+
+
+Started GET "/weibo/access_token?oauth_token=632d6e34fe3e164be9cea518c6349432&oauth_verifier=847016" for 127.0.0.1 at 2011-05-25 09:25:27 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"632d6e34fe3e164be9cea518c6349432", "oauth_verifier"=>"847016"}
+Completed   in 85ms
+
+OAuth::Unauthorized (401 Unauthorized):
+  app/controllers/weibo_controller.rb:24:in `access_token'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-25 09:25:36 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=fc234843c35e35bf5e3feeb8ec0febb3
+Completed 302 Found in 2758ms
+
+
+Started GET "/weibo/access_token?oauth_token=fc234843c35e35bf5e3feeb8ec0febb3&oauth_verifier=448330" for 127.0.0.1 at 2011-05-25 09:25:44 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"fc234843c35e35bf5e3feeb8ec0febb3", "oauth_verifier"=>"448330"}
+Rendered weibo/access_token.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2255ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/access_token?oauth_token=fc234843c35e35bf5e3feeb8ec0febb3&oauth_verifier=448330" for 127.0.0.1 at 2011-05-25 09:31:08 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"fc234843c35e35bf5e3feeb8ec0febb3", "oauth_verifier"=>"448330"}
+Completed   in 55ms
+
+OAuth::Unauthorized (401 Unauthorized):
+  app/controllers/weibo_controller.rb:24:in `access_token'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started GET "/weibo/" for 127.0.0.1 at 2011-05-25 09:31:13 +0800
+  Processing by WeiboController#index as HTML
+Rendered weibo/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/" for 127.0.0.1 at 2011-05-25 09:31:18 +0800
+  Processing by WeiboController#index as HTML
+Rendered weibo/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/" for 127.0.0.1 at 2011-05-25 09:31:38 +0800
+  Processing by WeiboController#index as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=79139b489bb90ec81fd957820fc9a800
+Redirected to 
+Completed   in 53ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/weibo_controller.rb:41:in `index'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.8ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.5ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-25 09:31:49 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=b7a30d5179643d1270e67ef6576d15b9
+Completed 302 Found in 538ms
+
+
+Started GET "/weibo/access_token?oauth_token=b7a30d5179643d1270e67ef6576d15b9&oauth_verifier=622295" for 127.0.0.1 at 2011-05-25 09:31:54 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"b7a30d5179643d1270e67ef6576d15b9", "oauth_verifier"=>"622295"}
+Rendered weibo/access_token.html.erb within layouts/application (12.1ms)
+Completed   in 213ms
+
+ActionView::Template::Error (undefined local variable or method `user_info_url' for #<#<Class:0xa204478>:0xa2015d4>):
+    1: Access Token Page
+    2: 
+    3: <%= link_to user_info_url %>
+  app/views/weibo/access_token.html.erb:3:in `_app_views_weibo_access_token_html_erb__328815609_84934870_992365256'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-25 09:45:33 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=7ce1dc1fad4f853f92ca685da4fd0d48
+Completed 302 Found in 291ms
+
+
+Started GET "/weibo/access_token?oauth_token=7ce1dc1fad4f853f92ca685da4fd0d48&oauth_verifier=901719" for 127.0.0.1 at 2011-05-25 09:45:39 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"7ce1dc1fad4f853f92ca685da4fd0d48", "oauth_verifier"=>"901719"}
+Rendered weibo/access_token.html.erb within layouts/application (8.3ms)
+Completed   in 82ms
+
+ActionView::Template::Error (undefined local variable or method `user_info_url' for #<#<Class:0x9b827a8>:0x9b747fc>):
+    1: Access Token Page
+    2: 
+    3: <%= link_to "Send Message", user_info_url %>
+  app/views/weibo/access_token.html.erb:3:in `_app_views_weibo_access_token_html_erb__328815609_81463650_992365256'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.2ms)
+
+
+Started GET "/weibo/access_token?oauth_token=7ce1dc1fad4f853f92ca685da4fd0d48&oauth_verifier=901719" for 127.0.0.1 at 2011-05-25 09:45:48 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"7ce1dc1fad4f853f92ca685da4fd0d48", "oauth_verifier"=>"901719"}
+Completed   in 34ms
+
+OAuth::Unauthorized (401 Unauthorized):
+  app/controllers/weibo_controller.rb:24:in `access_token'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.2ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-25 09:46:55 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=9352a92c0949dfdcf8a2706527cfcb25
+Completed 302 Found in 646ms
+
+
+Started GET "/weibo/access_token?oauth_token=9352a92c0949dfdcf8a2706527cfcb25&oauth_verifier=279344" for 127.0.0.1 at 2011-05-25 09:47:01 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"9352a92c0949dfdcf8a2706527cfcb25", "oauth_verifier"=>"279344"}
+Rendered weibo/access_token.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 784ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 09:47:04 +0800
+  Processing by WeiboController#user_info as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 1171ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 10:16:36 +0800
+  Processing by WeiboController#user_info as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 1011ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-25 10:17:23 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=8e9c472a0ba85e542146b1713e629b50
+Completed 302 Found in 1696ms
+
+
+Started GET "/weibo/access_token?oauth_token=8e9c472a0ba85e542146b1713e629b50&oauth_verifier=631561" for 127.0.0.1 at 2011-05-25 10:17:38 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"8e9c472a0ba85e542146b1713e629b50", "oauth_verifier"=>"631561"}
+Rendered weibo/access_token.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1109ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 10:17:57 +0800
+  Processing by WeiboController#user_info as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 846ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-25 10:21:20 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=ef7b9a2554d09c29c542f9077f12515c
+Completed 302 Found in 932ms
+
+
+Started GET "/weibo/access_token?oauth_token=ef7b9a2554d09c29c542f9077f12515c&oauth_verifier=297513" for 127.0.0.1 at 2011-05-25 10:21:47 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"ef7b9a2554d09c29c542f9077f12515c", "oauth_verifier"=>"297513"}
+Rendered weibo/access_token.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1804ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 10:21:59 +0800
+  Processing by WeiboController#user_info as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 2247ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/access_token?oauth_token=ef7b9a2554d09c29c542f9077f12515c&oauth_verifier=297513" for 127.0.0.1 at 2011-05-25 10:25:28 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"ef7b9a2554d09c29c542f9077f12515c", "oauth_verifier"=>"297513"}
+Completed   in 81ms
+
+OAuth::Unauthorized (401 Unauthorized):
+  app/controllers/weibo_controller.rb:24:in `access_token'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.3ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-25 10:25:35 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=82969afa8d8f575a394a9a8616a145a7
+Completed 302 Found in 49ms
+
+
+Started GET "/weibo/access_token?oauth_token=82969afa8d8f575a394a9a8616a145a7&oauth_verifier=515920" for 127.0.0.1 at 2011-05-25 10:25:40 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"82969afa8d8f575a394a9a8616a145a7", "oauth_verifier"=>"515920"}
+Rendered weibo/access_token.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1177ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 10:25:42 +0800
+  Processing by WeiboController#user_info as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 789ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 10:29:29 +0800
+  Processing by WeiboController#user_info as 
+Completed   in 0ms
+
+TypeError (can't convert Time into String):
+  app/controllers/weibo_controller.rb:32:in `+'
+  app/controllers/weibo_controller.rb:32:in `user_info'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 10:30:59 +0800
+  Processing by WeiboController#user_info as 
+Rendered text template (0.0ms)
+Completed 200 OK in 604ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/userinfo" for 127.0.0.1 at 2011-05-25 10:32:26 +0800
+
+AbstractController::ActionNotFound (The action 'userinfo' could not be found for WeiboController):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/weibo/userinfo" for 127.0.0.1 at 2011-05-25 10:32:41 +0800
+
+AbstractController::ActionNotFound (The action 'userinfo' could not be found for WeiboController):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 10:32:54 +0800
+  Processing by WeiboController#user_info as 
+Rendered text template (0.0ms)
+Completed 200 OK in 217ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 10:33:55 +0800
+  Processing by WeiboController#user_info as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 3463ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 10:34:22 +0800
+  Processing by WeiboController#user_info as 
+Rendered text template (0.0ms)
+Completed 200 OK in 315ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-25 10:44:05 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=86618067446a6d5d04c7812f9c6e6aa5
+Completed 302 Found in 444ms
+
+
+Started GET "/weibo/access_token?oauth_token=86618067446a6d5d04c7812f9c6e6aa5&oauth_verifier=749660" for 127.0.0.1 at 2011-05-25 10:44:10 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"86618067446a6d5d04c7812f9c6e6aa5", "oauth_verifier"=>"749660"}
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from access_token at /var/www/ror/weibo/app/controllers/weibo_controller.rb:27)
+Completed   in 1547ms
+
+Errno::ENOENT (No such file or directory - /var/www/ror/weibo/config/weibo.config):
+  app/controllers/weibo_controller.rb:27:in `initialize'
+  app/controllers/weibo_controller.rb:27:in `new'
+  app/controllers/weibo_controller.rb:27:in `access_token'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.3ms)
+
+
+Started GET "/weibo/access_token?oauth_token=86618067446a6d5d04c7812f9c6e6aa5&oauth_verifier=749660" for 127.0.0.1 at 2011-05-25 10:45:18 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"86618067446a6d5d04c7812f9c6e6aa5", "oauth_verifier"=>"749660"}
+Completed   in 760ms
+
+OAuth::Unauthorized (401 Unauthorized):
+  app/controllers/weibo_controller.rb:24:in `access_token'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.7ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-25 10:45:24 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=2f3a423dcbaca3aa89b29ce23b5b81e5
+Completed 302 Found in 699ms
+
+
+Started GET "/weibo/access_token?oauth_token=2f3a423dcbaca3aa89b29ce23b5b81e5&oauth_verifier=167540" for 127.0.0.1 at 2011-05-25 10:45:29 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"2f3a423dcbaca3aa89b29ce23b5b81e5", "oauth_verifier"=>"167540"}
+Rendered weibo/access_token.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 322ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from irb_binding at (irb):1)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 10:56:28 +0800
+  Processing by WeiboController#user_info as 
+Rendered text template (0.0ms)
+Completed 200 OK in 751ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 10:57:01 +0800
+  Processing by WeiboController#user_info as 
+Rendered text template (0.0ms)
+Completed 200 OK in 367ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 10:57:21 +0800
+  Processing by WeiboController#user_info as 
+Rendered text template (0.0ms)
+Completed 200 OK in 2774ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 12:22:56 +0800
+  Processing by WeiboController#user_info as 
+Rendered text template (0.0ms)
+Completed 200 OK in 4633ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/access_token?oauth_token=2f3a423dcbaca3aa89b29ce23b5b81e5&oauth_verifier=167540" for 127.0.0.1 at 2011-05-25 14:09:05 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"2f3a423dcbaca3aa89b29ce23b5b81e5", "oauth_verifier"=>"167540"}
+Completed   in 897ms
+
+OAuth::Unauthorized (401 Unauthorized):
+  app/controllers/weibo_controller.rb:24:in `access_token'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 14:09:24 +0800
+  Processing by WeiboController#user_info as 
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from user_info at /var/www/ror/weibo-test/app/controllers/weibo_controller.rb:34)
+Rendered text template (0.0ms)
+Completed 200 OK in 1485ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/image/back/scroll_bk.gif" for 127.0.0.1 at 2011-05-25 14:21:27 +0800
+
+ActionController::RoutingError (No route matches "/image/back/scroll_bk.gif"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/offline/lightbox.manifest" for 127.0.0.1 at 2011-05-25 14:21:39 +0800
+
+ActionController::RoutingError (No route matches "/offline/lightbox.manifest"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/image/back/scroll_bk.gif" for 127.0.0.1 at 2011-05-25 14:28:36 +0800
+
+ActionController::RoutingError (No route matches "/image/back/scroll_bk.gif"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/offline/lightbox.manifest" for 127.0.0.1 at 2011-05-25 14:28:37 +0800
+
+ActionController::RoutingError (No route matches "/offline/lightbox.manifest"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/offline/lightbox.manifest" for 192.168.1.200 at 2011-05-25 14:30:24 +0800
+
+ActionController::RoutingError (No route matches "/offline/lightbox.manifest"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.9ms)
+
+
+Started GET "/offline/lightbox.manifest" for 192.168.1.200 at 2011-05-25 15:00:49 +0800
+
+ActionController::RoutingError (No route matches "/offline/lightbox.manifest"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1615.1ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 15:18:59 +0800
+  Processing by WeiboController#user_info as 
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from get_access_info at /var/www/ror/weibo/app/controllers/weibo_controller.rb:58)
+Rendered text template (0.0ms)
+Completed 200 OK in 772ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 15:22:26 +0800
+  Processing by WeiboController#user_info as 
+Completed   in 227ms
+
+OAuth::Unauthorized (401 Unauthorized):
+  app/controllers/weibo_controller.rb:26:in `access_token'
+  app/controllers/weibo_controller.rb:43:in `user_info'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.1ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 15:23:01 +0800
+  Processing by WeiboController#user_info as 
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from get_access_info at /var/www/ror/weibo/app/controllers/weibo_controller.rb:59)
+Completed   in 4736ms
+
+OAuth::Unauthorized (401 Unauthorized):
+  app/controllers/weibo_controller.rb:26:in `access_token'
+  app/controllers/weibo_controller.rb:43:in `user_info'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.2ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 15:26:03 +0800
+  Processing by WeiboController#user_info as 
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from get_access_info at /var/www/ror/weibo/app/controllers/weibo_controller.rb:59)
+Rendered text template (0.0ms)
+Completed 200 OK in 650ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 15:36:17 +0800
+  Processing by WeiboController#user_info as 
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from get_access_info at /var/www/ror/weibo/app/controllers/weibo_controller.rb:59)
+Rendered text template (0.0ms)
+Completed 200 OK in 471ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/users_show" for 127.0.0.1 at 2011-05-25 15:38:50 +0800
+  Processing by WeiboController#users_show as 
+Rendered text template (0.0ms)
+Completed 200 OK in 208ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/users_show" for 127.0.0.1 at 2011-05-25 15:40:56 +0800
+  Processing by WeiboController#users_show as 
+Rendered text template (0.0ms)
+Completed 200 OK in 515ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/users_show" for 127.0.0.1 at 2011-05-25 15:41:22 +0800
+  Processing by WeiboController#users_show as 
+Rendered text template (0.0ms)
+Completed 200 OK in 94ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/users_show" for 127.0.0.1 at 2011-05-25 15:42:37 +0800
+  Processing by WeiboController#users_show as 
+Rendered text template (0.0ms)
+Completed 200 OK in 523ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/users_show" for 192.168.1.200 at 2011-05-25 15:43:10 +0800
+  Processing by WeiboController#users_show as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 1508ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 15:44:47 +0800
+  Processing by WeiboController#user_info as 
+Rendered text template (0.0ms)
+Completed 200 OK in 574ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 15:54:54 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 352ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 15:55:18 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 669ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 15:56:21 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 82ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 15:56:38 +0800
+  Processing by WeiboController#account_verify_credentials as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 3634ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 15:59:47 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 94ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:02:03 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 5066ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:03:37 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 434ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:04:14 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 71ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:04:56 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 527ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:08:53 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 2315ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:09:57 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Completed   in 6198ms
+
+NoMethodError (undefined method `id' for #<Net::HTTPOK 200 OK readbody=true>):
+  app/controllers/weibo_controller.rb:55:in `account_verify_credentials'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (26.7ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-25 16:11:40 +0800
+  Processing by WeiboController#user_info as 
+Rendered text template (0.0ms)
+Completed 200 OK in 17324ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:13:54 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 1186ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:14:57 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 469ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:15:45 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 439ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:16:42 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 227ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:17:16 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 103ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:17:46 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 5501ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:18:30 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Completed   in 67ms
+
+NoMethodError (undefined method `name' for #<String:0x982d864>):
+  app/controllers/weibo_controller.rb:57:in `account_verify_credentials'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:21:31 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Completed   in 247ms
+
+NoMethodError (undefined method `name' for #<Hash:0x9a5b744>):
+  app/controllers/weibo_controller.rb:57:in `account_verify_credentials'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:22:00 +0800
+  Processing by WeiboController#account_verify_credentials as HTML
+Completed   in 3099ms
+
+NoMethodError (undefined method `name' for #<Hash:0x9980f68>):
+  app/controllers/weibo_controller.rb:57:in `account_verify_credentials'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.7ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:22:27 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 73ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:22:44 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 59ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:23:14 +0800
+  Processing by WeiboController#account_verify_credentials as 
+Rendered text template (0.0ms)
+Completed 200 OK in 1019ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/account_verify_credentials.json" for 127.0.0.1 at 2011-05-25 16:34:49 +0800
+
+ActionController::RoutingError (No route matches "/weibo/account_verify_credentials.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/weibo/account_verify_credentials.json" for 127.0.0.1 at 2011-05-25 16:36:20 +0800
+
+ActionController::RoutingError (No route matches "/weibo/account_verify_credentials.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/weibo/account_verify_credentials.json" for 127.0.0.1 at 2011-05-25 16:42:06 +0800
+
+ActionController::RoutingError (No route matches "/weibo/account_verify_credentials.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/weibo/account_verify_credentials.json" for 127.0.0.1 at 2011-05-25 16:42:08 +0800
+
+ActionController::RoutingError (No route matches "/weibo/account_verify_credentials.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/weibo/account_verify_credentials.json" for 127.0.0.1 at 2011-05-25 16:42:09 +0800
+
+ActionController::RoutingError (No route matches "/weibo/account_verify_credentials.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/weibo/account_verify_credentials.json" for 127.0.0.1 at 2011-05-25 16:42:09 +0800
+
+ActionController::RoutingError (No route matches "/weibo/account_verify_credentials.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/weibo/account_verify_credentials.json" for 127.0.0.1 at 2011-05-25 16:49:52 +0800
+
+ActionController::RoutingError (No route matches "/weibo/account_verify_credentials.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:53:19 +0800
+  Processing by WeiboController#account_verify_credentials as HTML
+Completed   in 444ms
+
+NoMethodError (undefined method `response_to' for #<WeiboController:0xa0497b4>):
+  app/controllers/weibo_controller.rb:55:in `account_verify_credentials'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:53:56 +0800
+  Processing by WeiboController#account_verify_credentials as HTML
+Completed 406 Not Acceptable in 4003ms
+
+
+Started GET "/weibo/account_verify_credentials" for 127.0.0.1 at 2011-05-25 16:54:43 +0800
+  Processing by WeiboController#account_verify_credentials as HTML
+Completed 406 Not Acceptable in 1028ms
+
+
+Started GET "/weibo/account_verify_credentials.json" for 127.0.0.1 at 2011-05-25 16:55:21 +0800
+  Processing by WeiboController#account_verify_credentials as JSON
+Completed 200 OK in 453ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/verify_credentials.json" for 127.0.0.1 at 2011-05-25 17:03:30 +0800
+  Processing by WeiboController#account_verify_credentials as JSON
+Completed 200 OK in 59ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/verify_credentials" for 192.168.1.200 at 2011-05-25 17:03:55 +0800
+  Processing by WeiboController#account_verify_credentials as HTML
+Completed 406 Not Acceptable in 440ms
+
+
+Started GET "/account/verify_credentials.json" for 192.168.1.200 at 2011-05-25 17:04:05 +0800
+  Processing by WeiboController#account_verify_credentials as JSON
+Completed 200 OK in 858ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/user_info" for 127.0.0.1 at 2011-05-26 09:02:45 +0800
+  Processing by WeiboController#user_info as 
+Rendered text template (0.0ms)
+Completed 200 OK in 1692ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/verify_credentials.json" for 127.0.0.1 at 2011-05-26 09:03:15 +0800
+  Processing by WeiboController#account_verify_credentials as JSON
+Completed 200 OK in 1413ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/offline/lightbox.manifest" for 192.168.1.200 at 2011-05-26 09:06:08 +0800
+
+ActionController::RoutingError (No route matches "/offline/lightbox.manifest"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/account/statuses_friends_timeline.json?page=1" for 127.0.0.1 at 2011-05-26 10:53:08 +0800
+
+ActionController::RoutingError (No route matches "/account/statuses_friends_timeline.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/account/statuses_friends_timeline.json?page=1" for 127.0.0.1 at 2011-05-26 10:54:52 +0800
+
+ActionController::RoutingError (No route matches "/account/statuses_friends_timeline.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/friends_timeline.json?page=1" for 127.0.0.1 at 2011-05-26 10:55:11 +0800
+
+ActionController::RoutingError (No route matches "/friends_timeline.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/statuses/friends_timeline.json?page=1" for 127.0.0.1 at 2011-05-26 10:55:23 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+  Parameters: {"page"=>"1"}
+Completed 200 OK in 3386ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/friends_timeline.json?page=1" for 127.0.0.1 at 2011-05-26 10:57:08 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+  Parameters: {"page"=>"1"}
+Completed 200 OK in 4355ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/friends_timeline.json?page=1" for 192.168.1.200 at 2011-05-26 10:58:50 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+  Parameters: {"page"=>"1"}
+Completed 200 OK in 1877ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/friends_timeline.json?page=1" for 127.0.0.1 at 2011-05-26 11:04:48 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+  Parameters: {"page"=>"1"}
+Completed 200 OK in 3383ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/offline/lightbox.manifest" for 192.168.1.200 at 2011-05-26 11:06:08 +0800
+
+ActionController::RoutingError (No route matches "/offline/lightbox.manifest"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/statuses/friends_timeline.json?page=1" for 192.168.1.200 at 2011-05-26 11:06:10 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+  Parameters: {"page"=>"1"}
+Completed 200 OK in 2970ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/friends_timeline.json?page=1" for 127.0.0.1 at 2011-05-26 11:07:46 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+  Parameters: {"page"=>"1"}
+Completed 200 OK in 6406ms (Views: 140.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/offline/lightbox.manifest" for 192.168.1.200 at 2011-05-26 11:27:10 +0800
+
+ActionController::RoutingError (No route matches "/offline/lightbox.manifest"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/statuses/update.json" for 127.0.0.1 at 2011-05-26 12:19:31 +0800
+
+SyntaxError (/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: invalid multibyte char (US-ASCII)
+/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: invalid multibyte char (US-ASCII)
+/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: syntax error, unexpected $end, expecting keyword_end
+    message=params[:message]||"转发微博"
+                                 ^):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.7ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.7ms)
+
+
+Started GET "/statuses/update.json" for 127.0.0.1 at 2011-05-26 12:20:52 +0800
+
+SyntaxError (/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: invalid multibyte char (US-ASCII)
+/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: invalid multibyte char (US-ASCII)
+/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: syntax error, unexpected $end, expecting keyword_end
+    message=params[:message]||'转发微博'
+                                 ^):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/statuses/update.json" for 127.0.0.1 at 2011-05-26 12:21:33 +0800
+
+SyntaxError (/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: invalid multibyte char (US-ASCII)
+/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: invalid multibyte char (US-ASCII)
+/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: syntax error, unexpected $end, expecting keyword_end
+    message=params[:message]||'转发微博'
+                                 ^):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/statuses/update.json?message=" for 127.0.0.1 at 2011-05-26 12:29:31 +0800
+  Processing by WeiboController#statuses_update as JSON
+  Parameters: {"message"=>""}
+Completed 200 OK in 480ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/update.json?message=" for 127.0.0.1 at 2011-05-26 12:34:09 +0800
+  Processing by WeiboController#statuses_update as JSON
+  Parameters: {"message"=>""}
+Completed   in 1ms
+
+TypeError (can't convert true into String):
+  app/controllers/weibo_controller.rb:39:in `+'
+  app/controllers/weibo_controller.rb:39:in `statuses_update'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.7ms)
+
+
+Started GET "/statuses/update.json?message=" for 127.0.0.1 at 2011-05-26 12:34:48 +0800
+  Processing by WeiboController#statuses_update as JSON
+  Parameters: {"message"=>""}
+Completed 200 OK in 199ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/update.json?message=" for 127.0.0.1 at 2011-05-26 12:37:10 +0800
+
+SyntaxError (/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: invalid multibyte char (US-ASCII)
+/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: invalid multibyte char (US-ASCII)
+/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: syntax error, unexpected $end, expecting keyword_end
+...? params[:message].lstrip : "转发微博"
+...                               ^):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started GET "/statuses/update.json?message=" for 127.0.0.1 at 2011-05-26 12:39:10 +0800
+
+SyntaxError (/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: invalid multibyte char (US-ASCII)
+/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: invalid multibyte char (US-ASCII)
+/var/www/ror/weibo/app/controllers/weibo_controller.rb:38: syntax error, unexpected $end, expecting ':'
+...[:message].lstrip.empty?) ? "转发微博" : (params[:messag...
+...                               ^):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/statuses/update.json?message=" for 127.0.0.1 at 2011-05-26 12:41:01 +0800
+  Processing by WeiboController#statuses_update as JSON
+  Parameters: {"message"=>""}
+Completed   in 1ms
+
+NoMethodError (undefined method `put' for #<WeiboController:0xa051220>):
+  app/controllers/weibo_controller.rb:40:in `statuses_update'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/statuses/update.json?message=" for 127.0.0.1 at 2011-05-26 12:41:30 +0800
+  Processing by WeiboController#statuses_update as JSON
+  Parameters: {"message"=>""}
+Completed   in 78ms
+
+ActionView::MissingTemplate (Missing template weibo/statuses_update with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:json], :locale=>[:en, :en]} in view paths "/var/www/ror/weibo/app/views"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.7ms)
+
+
+Started GET "/statuses/update.json?message=" for 127.0.0.1 at 2011-05-26 12:43:17 +0800
+  Processing by WeiboController#statuses_update as JSON
+  Parameters: {"message"=>""}
+Completed 200 OK in 1024ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/update.json?message=" for 127.0.0.1 at 2011-05-26 12:44:38 +0800
+  Processing by WeiboController#statuses_update as JSON
+  Parameters: {"message"=>""}
+Completed 200 OK in 915ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/update.json?message=ttt" for 127.0.0.1 at 2011-05-26 12:44:55 +0800
+  Processing by WeiboController#statuses_update as JSON
+  Parameters: {"message"=>"ttt"}
+Completed 200 OK in 389ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at 2011-05-26 13:04:48 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+Completed   in 1ms
+
+NoMethodError (undefined method `lstrip' for nil:NilClass):
+  app/controllers/weibo_controller.rb:69:in `statuses_friends_timeline'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.5ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at 2011-05-26 13:05:57 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+Completed   in 1ms
+
+TypeError (can't convert Fixnum into String):
+  app/controllers/weibo_controller.rb:74:in `+'
+  app/controllers/weibo_controller.rb:74:in `statuses_friends_timeline'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (25.0ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.3ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at 2011-05-26 13:06:31 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+Completed   in 0ms
+
+TypeError (can't convert Fixnum into String):
+  app/controllers/weibo_controller.rb:74:in `+'
+  app/controllers/weibo_controller.rb:74:in `statuses_friends_timeline'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (14.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at 2011-05-26 13:06:44 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+Completed   in 0ms
+
+TypeError (can't convert Fixnum into String):
+  app/controllers/weibo_controller.rb:74:in `+'
+  app/controllers/weibo_controller.rb:74:in `statuses_friends_timeline'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at 2011-05-26 13:07:18 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+Completed 200 OK in 1140ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at 2011-05-26 13:08:17 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+Completed   in 707ms
+
+NoMethodError (undefined method `split' for :page:Symbol):
+  app/controllers/weibo_controller.rb:74:in `statuses_friends_timeline'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at 2011-05-26 13:09:24 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+Completed 200 OK in 1782ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/comments_to_me.json" for 127.0.0.1 at 2011-05-26 13:16:50 +0800
+
+ActionController::RoutingError (No route matches "/statuses/comments_to_me.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/statuses/comments_to_me" for 127.0.0.1 at 2011-05-26 13:17:12 +0800
+
+ActionController::RoutingError (No route matches "/statuses/comments_to_me"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/statuses/comments_to_me" for 127.0.0.1 at 2011-05-26 13:18:51 +0800
+  Processing by WeiboController#statuses_comments_to_me as 
+Completed   in 161ms
+
+ActionView::MissingTemplate (Missing template weibo/statuses_comments_to_me with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html, :text, :js, :css, :ics, :csv, :xml, :rss, :atom, :yaml, :multipart_form, :url_encoded_form, :json], :locale=>[:en, :en]} in view paths "/var/www/ror/weibo/app/views"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.9ms)
+
+
+Started GET "/statuses/comments_to_me" for 127.0.0.1 at 2011-05-26 13:23:37 +0800
+  Processing by WeiboController#statuses_comments_to_me as 
+Completed   in 2ms
+
+NameError (undefined local variable or method `url' for #<WeiboController:0x95975b4>):
+  app/controllers/weibo_controller.rb:100:in `get_response'
+  app/controllers/weibo_controller.rb:51:in `statuses_comments_to_me'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/statuses/comments_to_me.json" for 127.0.0.1 at 2011-05-26 13:23:44 +0800
+  Processing by WeiboController#statuses_comments_to_me as JSON
+Completed   in 1ms
+
+NameError (undefined local variable or method `url' for #<WeiboController:0x9d4bee0>):
+  app/controllers/weibo_controller.rb:100:in `get_response'
+  app/controllers/weibo_controller.rb:51:in `statuses_comments_to_me'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/statuses/comments_to_me.json" for 127.0.0.1 at 2011-05-26 13:24:20 +0800
+  Processing by WeiboController#statuses_comments_to_me as JSON
+Completed 200 OK in 642ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account/verify_credentials.json" for 127.0.0.1 at 2011-05-26 13:25:57 +0800
+  Processing by WeiboController#account_verify_credentials as JSON
+Completed 200 OK in 1789ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at 2011-05-26 13:30:05 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+Completed 200 OK in 1394ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/comments_by_me.json" for 127.0.0.1 at 2011-05-26 13:36:00 +0800
+  Processing by WeiboController#statuses_comments_by_me as JSON
+Completed 200 OK in 134ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-26 13:47:29 +0800
+  Processing by WeiboController#request_token as 
+Completed   in 1ms
+
+Errno::ENOENT (No such file or directory - /var/www/ror/weibo/config/weibo.config):
+  app/controllers/weibo_controller.rb:83:in `readlines'
+  app/controllers/weibo_controller.rb:83:in `get_access_info'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-26 13:48:35 +0800
+  Processing by WeiboController#request_token as 
+Completed   in 1ms
+
+Errno::ENOENT (No such file or directory - /var/www/ror/weibo/config/weibo.config):
+  app/controllers/weibo_controller.rb:83:in `readlines'
+  app/controllers/weibo_controller.rb:83:in `get_access_info'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.5ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-26 13:49:06 +0800
+  Processing by WeiboController#request_token as 
+Completed   in 0ms
+
+Errno::ENOENT (No such file or directory - /var/www/ror/weibo/config/weibo.config):
+  app/controllers/weibo_controller.rb:83:in `readlines'
+  app/controllers/weibo_controller.rb:83:in `get_access_info'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.5ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-26 13:49:35 +0800
+  Processing by WeiboController#request_token as 
+Completed   in 0ms
+
+Errno::ENOENT (No such file or directory - /var/www/ror/weibo/config/weibo.config):
+  app/controllers/weibo_controller.rb:83:in `readlines'
+  app/controllers/weibo_controller.rb:83:in `get_access_info'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-26 13:50:39 +0800
+  Processing by WeiboController#request_token as 
+Completed   in 1ms
+
+NoMethodError (undefined method `chomp' for nil:NilClass):
+  app/controllers/weibo_controller.rb:84:in `get_access_info'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-26 13:51:54 +0800
+
+SyntaxError (/var/www/ror/weibo/app/controllers/weibo_controller.rb:6: syntax error, unexpected ':', expecting keyword_end
+...efore_filter :get_access_info :except => [ :request_token, :...
+...                               ^):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.6ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.8ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-26 13:55:21 +0800
+  Processing by WeiboController#request_token as 
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=3223d74609ba8b5d698b8b98fd7857c3
+Completed 302 Found in 1767ms
+
+
+Started GET "/offline/lightbox.manifest" for 127.0.0.1 at 2011-05-26 13:56:11 +0800
+
+ActionController::RoutingError (No route matches "/offline/lightbox.manifest"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/weibo/request_token" for 127.0.0.1 at 2011-05-26 13:56:15 +0800
+  Processing by WeiboController#request_token as HTML
+Redirected to http://api.t.sina.com.cn/oauth/authorize?oauth_callback=http%3A%2F%2Flocalhost%3A3000%2Fweibo%2Faccess_token&oauth_token=e21af409861b0876fce9f6d4484a094c
+Completed 302 Found in 1249ms
+
+
+Started GET "/weibo/access_token?oauth_token=e21af409861b0876fce9f6d4484a094c&oauth_verifier=345105" for 127.0.0.1 at 2011-05-26 13:56:40 +0800
+  Processing by WeiboController#access_token as HTML
+  Parameters: {"oauth_token"=>"e21af409861b0876fce9f6d4484a094c", "oauth_verifier"=>"345105"}
+Rendered weibo/access_token.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 1203ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/comments_by_me.json" for 127.0.0.1 at 2011-05-26 13:57:36 +0800
+  Processing by WeiboController#statuses_comments_by_me as JSON
+Completed 200 OK in 6870ms (Views: 140.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/statuses_public_timeline.json" for 127.0.0.1 at 2011-05-26 14:45:08 +0800
+
+ActionController::RoutingError (No route matches "/statuses/statuses_public_timeline.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/weibo/statuses_public_timeline.json" for 127.0.0.1 at 2011-05-26 14:45:16 +0800
+
+ActionController::RoutingError (No route matches "/weibo/statuses_public_timeline.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/weibo/statuses_public_timeline.json" for 127.0.0.1 at 2011-05-26 14:46:37 +0800
+
+ActionController::RoutingError (No route matches "/weibo/statuses_public_timeline.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/statuses/public_timeline.json" for 127.0.0.1 at 2011-05-26 14:47:38 +0800
+  Processing by WeiboController#statuses_public_timeline as JSON
+Completed 200 OK in 1910ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at 2011-05-26 14:48:39 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+Completed 200 OK in 898ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/user_timeline.json" for 127.0.0.1 at 2011-05-26 14:48:52 +0800
+
+ActionController::RoutingError (No route matches "/statuses/user_timeline.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/statuses/user_timeline.json" for 127.0.0.1 at 2011-05-26 14:52:59 +0800
+
+SyntaxError (/var/www/ror/weibo/app/controllers/weibo_controller.rb:54: unknown regexp options - TODO
+/var/www/ror/weibo/app/controllers/weibo_controller.rb:54: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  //TODO get every users weibo list ( sho...
+            ^
+/var/www/ror/weibo/app/controllers/weibo_controller.rb:54: syntax error, unexpected ')'):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.1ms)
+
+
+Started GET "/statuses/user_timeline.json" for 127.0.0.1 at 2011-05-26 14:53:21 +0800
+  Processing by WeiboController#statuses_user_timeline as JSON
+Completed 200 OK in 3836ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/mentions.json" for 127.0.0.1 at 2011-05-26 14:55:53 +0800
+  Processing by WeiboController#statuses_mentions as JSON
+Completed 200 OK in 912ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/mentions.json" for 127.0.0.1 at 2011-05-26 14:57:22 +0800
+  Processing by WeiboController#statuses_mentions as JSON
+Completed 200 OK in 967ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/comments_timeline.json" for 127.0.0.1 at 2011-05-26 14:57:35 +0800
+  Processing by WeiboController#statuses_comments_timeline as JSON
+Completed 200 OK in 1883ms (Views: 151.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/comments.json" for 127.0.0.1 at 2011-05-26 14:59:34 +0800
+  Processing by WeiboController#statuses_comments as JSON
+Completed 200 OK in 86ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/mentions" for 127.0.0.1 at 2011-05-27 07:46:47 +0800
+  Processing by WeiboController#statuses_mentions as 
+Completed 200 OK in 1058ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/comments" for 192.168.1.209 at 2011-05-27 09:09:52 +0800
+  Processing by WeiboController#statuses_comments as 
+Completed   in 2ms
+
+TypeError (can't convert nil into String):
+  app/controllers/weibo_controller.rb:93:in `+'
+  app/controllers/weibo_controller.rb:93:in `statuses_comments'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+
+
+Started GET "/statuses/friends_timeline" for 192.168.1.209 at 2011-05-27 09:11:17 +0800
+  Processing by WeiboController#statuses_friends_timeline as 
+Completed 200 OK in 1641ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/comments.json?id=11271996144" for 192.168.1.209 at 2011-05-27 09:11:58 +0800
+  Processing by WeiboController#statuses_comments as JSON
+  Parameters: {"id"=>"11271996144"}
+Completed 200 OK in 2464ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 192.168.1.209 at 2011-05-27 09:21:02 +0800
+  Processing by WeiboController#statuses_friends_timeline as JSON
+Completed 200 OK in 1232ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/user_timeline.json" for 192.168.1.209 at 2011-05-27 09:23:22 +0800
+  Processing by WeiboController#statuses_user_timeline as JSON
+Completed 200 OK in 1550ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/unread.json" for 192.168.1.209 at 2011-05-27 09:36:09 +0800
+  Processing by WeiboController#statuses_unread as JSON
+Completed 200 OK in 150ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/reset_count.json?type=1" for 192.168.1.209 at 2011-05-27 09:40:34 +0800
+  Processing by WeiboController#statuses_reset_count as JSON
+  Parameters: {"type"=>"1"}
+Completed 200 OK in 1459ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/emotions.json" for 192.168.1.209 at 2011-05-27 09:42:37 +0800
+
+AbstractController::ActionNotFound (The action 'statuses_emotions' could not be found for WeiboController):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/statuses/emotions.json" for 192.168.1.209 at 2011-05-27 09:43:33 +0800
+
+ActionController::RoutingError (No route matches "/statuses/emotions.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (20.9ms)
+
+
+Started GET "/emotions.json" for 192.168.1.209 at 2011-05-27 09:43:40 +0800
+  Processing by WeiboController#emotions as JSON
+Completed 200 OK in 2962ms (Views: 123.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_timeline.json" for 192.168.1.209 at 2011-05-27 09:46:43 +0800
+
+ActionController::RoutingError (No route matches "/user_timeline.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/statuses/user_timeline.json" for 192.168.1.209 at 2011-05-27 09:46:47 +0800
+  Processing by WeiboController#statuses_user_timeline as JSON
+Completed 200 OK in 3230ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/show.json?id=11218728168" for 192.168.1.209 at 2011-05-27 09:47:52 +0800
+
+ActionController::RoutingError (No route matches "/statuses/show.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/statuses/show.json?id=11218728168" for 192.168.1.209 at 2011-05-27 09:48:51 +0800
+
+AbstractController::ActionNotFound (The action 'statuses_show' could not be found for WeiboController):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/statuses/show.json?id=11218728168" for 192.168.1.209 at 2011-05-27 09:49:31 +0800
+  Processing by WeiboController#statuses_show as JSON
+  Parameters: {"id"=>"11218728168"}
+Completed 200 OK in 4196ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/destroy.json?id=11218728168" for 192.168.1.209 at 2011-05-27 09:58:20 +0800
+  Processing by WeiboController#statuses_destroy as JSON
+  Parameters: {"id"=>"11218728168"}
+Completed 200 OK in 2419ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/repost.json?id=11218728168" for 192.168.1.209 at 2011-05-27 10:03:12 +0800
+  Processing by WeiboController#statuses_repost as JSON
+  Parameters: {"id"=>"11218728168"}
+Completed 200 OK in 3566ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/repost.json?id=11192316294" for 192.168.1.209 at 2011-05-27 10:05:22 +0800
+  Processing by WeiboController#statuses_repost as JSON
+  Parameters: {"id"=>"11192316294"}
+Completed 200 OK in 7460ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/comment.json?id=11192316294&comment=verygood" for 192.168.1.209 at 2011-05-27 10:11:18 +0800
+  Processing by WeiboController#statuses_comment as JSON
+  Parameters: {"id"=>"11192316294", "comment"=>"verygood"}
+Completed   in 1ms
+
+NameError (undefined local variable or method `comment' for #<WeiboController:0xb069298>):
+  app/controllers/weibo_controller.rb:186:in `statuses_comment'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.3ms)
+
+
+Started GET "/statuses/comment.json?id=11192316294&comment=verygood" for 192.168.1.209 at 2011-05-27 10:12:07 +0800
+  Processing by WeiboController#statuses_comment as JSON
+  Parameters: {"id"=>"11192316294", "comment"=>"verygood"}
+Completed 200 OK in 1238ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/comments_by_me.json" for 192.168.1.209 at 2011-05-27 10:15:09 +0800
+  Processing by WeiboController#statuses_comments_by_me as JSON
+Completed 200 OK in 1478ms (Views: 114.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/comment.json?id=11192316294&comment=testweibo" for 192.168.1.209 at 2011-05-27 10:15:48 +0800
+  Processing by WeiboController#statuses_comment as JSON
+  Parameters: {"id"=>"11192316294", "comment"=>"testweibo"}
+Completed 200 OK in 1158ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/comment_destroy/12200780949.json" for 192.168.1.209 at 2011-05-27 10:17:00 +0800
+
+ActionController::RoutingError (No route matches "/statuses/comment_destroy/12200780949.json"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/statuses/comment_destroy.json?id=12200780949" for 192.168.1.209 at 2011-05-27 10:21:53 +0800
+  Processing by WeiboController#statuses_comment_destroy as JSON
+  Parameters: {"id"=>"12200780949"}
+Completed 200 OK in 453ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/show" for 192.168.1.209 at 2011-05-27 10:41:07 +0800
+  Processing by WeiboController#users_show as 
+Completed 200 OK in 2178ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/show.json?id=2010916417" for 192.168.1.209 at 2011-05-27 10:42:26 +0800
+  Processing by WeiboController#users_show as JSON
+  Parameters: {"id"=>"2010916417"}
+Completed 200 OK in 2697ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/show.json?id=2010916417" for 192.168.1.209 at 2011-05-27 10:43:30 +0800
+  Processing by WeiboController#users_show as JSON
+  Parameters: {"id"=>"2010916417"}
+Completed 200 OK in 923ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/show.json?id=2010916417" for 192.168.1.209 at 2011-05-27 10:43:50 +0800
+  Processing by WeiboController#users_show as JSON
+  Parameters: {"id"=>"2010916417"}
+Completed 200 OK in 805ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/friends" for 192.168.1.209 at 2011-05-27 10:48:12 +0800
+  Processing by WeiboController#statuses_friends as 
+Completed 200 OK in 3030ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/friends" for 192.168.1.209 at 2011-05-27 10:53:03 +0800
+  Processing by WeiboController#statuses_friends as 
+Completed 200 OK in 1717ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/followers" for 192.168.1.209 at 2011-05-27 10:53:14 +0800
+  Processing by WeiboController#statuses_followers as 
+Completed 200 OK in 1991ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/offline/lightbox.manifest" for 192.168.1.218 at 2011-05-27 11:08:46 +0800
+
+ActionController::RoutingError (No route matches "/offline/lightbox.manifest"):
+  
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/users/hot.json" for 192.168.1.209 at 2011-05-27 11:26:34 +0800
+  Processing by WeiboController#users_hot as JSON
+Completed   in 1ms
+
+NoMethodError (undefined method `lstrip' for nil:NilClass):
+  app/controllers/weibo_controller.rb:236:in `users_hot'
+
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /usr/local/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.4ms)
+
+
+Started GET "/users/hot.json?category=default" for 192.168.1.209 at 2011-05-27 11:27:01 +0800
+  Processing by WeiboController#users_hot as JSON
+  Parameters: {"category"=>"default"}
+Completed 200 OK in 13559ms (Views: 130.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/suggestions.json" for 192.168.1.209 at 2011-05-27 11:31:17 +0800
+  Processing by WeiboController#users_suggestions as JSON
+Completed 200 OK in 607ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/suggestions.json" for 192.168.1.209 at 2011-05-27 11:31:44 +0800
+  Processing by WeiboController#users_suggestions as JSON
+Completed 200 OK in 1006ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statuses/followers.json" for 192.168.1.209 at 2011-05-27 13:37:01 +0800
+  Processing by WeiboController#statuses_followers as JSON
+Completed 200 OK in 4170ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/friendships/create.json?id=2088377693" for 192.168.1.209 at 2011-05-27 13:42:03 +0800
+  Processing by WeiboController#friendships_create as JSON
+  Parameters: {"id"=>"2088377693"}
+Completed 200 OK in 6649ms (Views: 2.9ms | ActiveRecord: 0.0ms)
